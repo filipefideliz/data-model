@@ -1,0 +1,18 @@
+version: '3.1'  
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test  
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d/
+    ports:
+      - '3306:3306'       
+    # Este é um arquivo docker-compose para iniciar um serviço MySQL
+    # As variáveis de ambiente configuram o banco de dados, usuário e senha
+    # O volume monta a pasta local ./sql para inicializar o banco de dados
+    # A porta 3306 é exposta para acesso externo
