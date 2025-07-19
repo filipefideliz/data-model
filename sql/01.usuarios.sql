@@ -3,7 +3,7 @@
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     cpf VARCHAR(11) UNIQUE NOT NULL,
-    telefone VARCHAR(11),
+    telefone VARCHAR(11) NOT NULL,
     data_nascimento DATE NOT NULL,
     e_instrutor BOOLEAN NOT NULL
     );

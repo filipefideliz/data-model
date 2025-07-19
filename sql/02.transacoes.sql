@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS transacoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT NOT NULL,
-    curso_id INT NOT NULL,
-    descricao TEXT,
+    id_usuario INT NOT NULL,
+    id_curso INT NOT NULL,
     metodo_pagamento VARCHAR(20) NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
-    FOREIGN KEY (curso_id) REFERENCES cursos(id)
+    descricao TEXT NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
+    FOREIGN KEY (id_curso) REFERENCES cursos(id)
 );
